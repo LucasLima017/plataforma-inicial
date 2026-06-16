@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexify - Quiz Vocacional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/tabler-icons.min.css">
+  <link rel="stylesheet" href="/front-end/style.css">
+  <link rel="stylesheet" href="/front-end/quiz.css">
+</head>
+<body>
+
+<nav>
+  <a href="/front-end/index.html" class="nav-logo">
+    <div class="logo-icon"><img src="/front-end/imagens/logo.png" alt="Nexify"></div>
+    <span>Nexify</span>
+  </a>
+  <div class="nav-actions">
+    <a href="/front-end/index.html" class="btn-ghost">Voltar ao Início</a>
+  </div>
+</nav>
+
+<main class="quiz-page">
+  <div class="quiz-card">
+    <div class="quiz-header">
+      <div class="progress-info">
+        <span id="question-counter">Pergunta 1 de 15</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress"></div>
+      </div>
+    </div>
+
+    <h2 class="question-text" id="question-text">Carregando pergunta...</h2>
+    
+    <div class="options-grid" id="options-container">
+      </div>
+
+    <div class="quiz-footer">
+      <button id="btn-prev" class="btn-outline" disabled>Anterior</button>
+      <button id="btn-next" class="btn-primary" style="margin-bottom: 0; width: auto; padding: 12px 32px;" disabled>Próxima</button>
+    </div>
+  </div>
+</main>
+
+<script src="/front-end/quiz.js"></script>
+
+</body>
+</html>

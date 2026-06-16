@@ -1,0 +1,129 @@
+.quiz-page {
+  min-height: calc(100vh - 66px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px; /* Reduzido para dar respiro em telas pequenas */
+}
+
+.quiz-card {
+  border-radius: 16px;
+  padding: 24px 20px;
+  max-width: 780px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+}
+
+.quiz-header { 
+  margin-bottom: 16px; 
+}
+
+#question-counter {
+  font-size: 12px; /* Menor e mais discreto */
+  font-weight: 700;
+  color: var(--c4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  height: 6px; /* Mais fina */
+  background: rgba(20, 163, 199, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--c3);
+  width: 0%;
+  transition: width 0.4s ease-out;
+}
+
+.question-text {
+  font-size: clamp(18px, 3.5vw, 22px); /* Diminuído para não quebrar em muitas linhas */
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 20px; /* Reduzido */
+  line-height: 1.3;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px; /* Espaçamento menor entre botões */
+  margin-bottom: 24px;
+}
+
+/* Duas colunas em tablets e desktops para achatar a altura total */
+@media (min-width: 768px) {
+  .options-grid { 
+    grid-template-columns: 1fr 1fr; 
+    gap: 12px;
+  }
+  .quiz-card { 
+    padding: 32px 40px; 
+  }
+}
+
+.option-btn {
+  background: #f4fbfd;
+  border: 2px solid rgba(114,200,221,0.28);
+  padding: 12px 16px; /* Botões mais finos e elegantes */
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 14px; /* Texto interno ligeiramente menor */
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.option-btn:hover {
+  border-color: var(--c3);
+  background: rgba(20,163,199,0.04);
+}
+
+.option-btn.selected {
+  border-color: var(--c3);
+  background: var(--c3);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(20,163,199,0.2);
+  transform: translateY(-1px);
+}
+
+.quiz-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding-top: 16px; /* Colado mais perto dos botões */
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--c4);
+  border: 2px solid var(--c4);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: var(--c4);
+  color: var(--white);
+}
+
+.btn-outline:disabled, #btn-next:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
